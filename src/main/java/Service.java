@@ -33,7 +33,7 @@ public class Service {
          if (em != null) { em.close(); em = null; }    
      }
     
-     public void CreerVoyage(StationTrain depart,StationTrain arriver,int prix){
+     public void creerVoyage(StationTrain depart,StationTrain arriver,int prix){
          em = this.getEntityManager();
          
          EntityTransaction trans = null;

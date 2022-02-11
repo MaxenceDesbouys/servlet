@@ -81,7 +81,12 @@ public class SNCFServlet extends HttpServlet {
                 out.println("name : "+name+", adresse : "+adresse+", prix = "+prix);
         }
         
-        service.CreerStation();
+	try {
+		int entier_prix = Integer.parseInt(prix);
+		service.creerStation(adresse, name, entier_prix);
+	} catch(Exception e) {
+		System.err.println("Erreur de parsage du prix qui est \"" + prix + '"');
+	}
     }
 
     /**
