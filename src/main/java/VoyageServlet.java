@@ -72,6 +72,7 @@ public class VoyageServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String depart = request.getParameter("depart");
         String arriver = request.getParameter("arriver");
         String prix = request.getParameter("prix");

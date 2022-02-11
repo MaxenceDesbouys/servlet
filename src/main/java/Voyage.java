@@ -1,6 +1,8 @@
 
 import java.io.Serializable;
 import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -21,8 +23,11 @@ public class Voyage implements Serializable {
     
     @Id
     private Long id;
+    @Column(name = "station_depart")
     StationTrain depart;
+    @Column(name = "station_arriver")
     StationTrain arriver;
+    @Column(name = "prix")
     float prix;
     
     public Voyage() {
