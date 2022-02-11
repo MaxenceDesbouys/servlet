@@ -12,8 +12,20 @@
         <title>Création de Voyage</title>
     </head>
     <body>
-        <input type='text' placeholder="Entrer station de départ" />
-        <input type='text' placeholder="Entrer station d'arriver" />
-        <input type='integer' placeholder="Entrer le prix du voyage" />
+        <form action="VoyageServlet" method="POST">
+            <label>Départ</label>
+            <br/>
+            <input type='text' name="depart" placeholder="Entrer station de départ" />
+            <br/>
+            <label>Arrivée</label>
+            <br/>
+            <input type='text' name="arriver" placeholder="Entrer station d'arriver" />
+            <br/>
+            <label>Prix</label>
+            <br/>
+            <input type='integer' name="prix" placeholder="Entrer le prix du voyage" />
+            <br/>
+            <input type="submit" value="creer" />
+        </form>
     </body>
 </html>
