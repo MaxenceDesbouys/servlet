@@ -9,24 +9,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Créer ou modifier des lignes de train</title>
     </head>
     <body>
-        <h1>ICI C'EST POUR CRÉER OU MODIFIER DES LIGNES DE TRAIN</h1>
-        
-        <form action="SNCFServlet" method="POST" id="form" >
-            
-        </form>
-        
-        <button id="addButton" >AJOUTER UNE LIGNE</button>
-        <script>
-            const button = document.getElementById('addButton');
-            button.addEventListener('click',function(){
-                const input = document.createElement('input');
-                const form = document.getElementById('form');
-                input.setAttribute('name','station');
-                form.appendChild(input);
-            });
-        </script>
+        <h1>Créer ou modifier des lignes de train</h1>
+            <h3>Liste des stations de train</h3>
+            <ul>
+                <% for(int i = 0; i < 3 ; i++) { %>
+                    <li><div><p>Train Paris Nord</p><button>modifier</button></div></li>
+                <% } %>
+            </ul>
+
+            <h3>Créer une ligne</h3>
+            <div>
+                <form action="SNCFServlet" method="POST">
+                    <label form="station">Choisissez vos stations</label>
+                    <select name="station" id="station" multiple>
+                    <% for(int i=0; i < 3 ; i++) { %>
+                        <% out.println("<option value='station'>Station" + i + "</option>"); %>                  
+                    <% } %>
+                    </select>
+                    <button id="submit" type="submit">Créer</button>
+                </form>
+            </div>
     </body>
 </html>

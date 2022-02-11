@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Créer une station</title>
     </head>
     <body>
-        <h1>MET TES ATTRIBUTS AJOUTER UNE STATION</h1>
+        <h1>Veuillez rentrer les informations de la nouvelle station</h1>
         
         <form action="SNCFServlet" method="POST" >
             <input type="text" name="nom" >

@@ -10,13 +10,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Page de login</title>
     </head>
     <body>
-        <h1>Venez donner vos données</h1>
+        <h1>Veuillez rentrer vos données</h1>
         
         
-        <p>Toutes vos données nous appartiennent</p>
+        <p style="color: grey;"><em>Mettez admin pour les deux champs</em></p>
         
         <form method="post" action="login">
             <p>Username :</p>
