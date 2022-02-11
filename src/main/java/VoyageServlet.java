@@ -16,10 +16,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author madesbouys
  */
-@WebServlet(urlPatterns = {"/SNCFServlet"})
-public class SNCFServlet extends HttpServlet {
+@WebServlet(urlPatterns = {"/VoyageServlet"})
+public class VoyageServlet extends HttpServlet {
 
-    private Service service = new Service();
+    private Service unService = new Service();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,10 +37,10 @@ public class SNCFServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SNCFServlet</title>");            
+            out.println("<title>Servlet VoyageServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SNCFServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet VoyageServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,7 +58,7 @@ public class SNCFServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("add_station.jsp");
+        processRequest(request, response);
     }
 
     /**
@@ -72,16 +72,11 @@ public class SNCFServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String name = request.getParameter("nom");
-        String adresse = request.getParameter("adresse");
+        String depart = request.getParameter("depart");
+        String arriver = request.getParameter("arriver");
         String prix = request.getParameter("prix");
         
-        try ( PrintWriter out = response.getWriter()) {
-                out.println("name : "+name+", adresse : "+adresse+", prix = "+prix);
-        }
-        
-        service.CreerStation();
+        unService.CreerStation();
     }
 
     /**

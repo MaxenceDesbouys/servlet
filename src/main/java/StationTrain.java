@@ -30,4 +30,30 @@ public class StationTrain implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getAdresses() {
+        return adresses;
+    }
+
+    public void setAdresses(String adresses) {
+        this.adresses = adresses;
+    }
+
+    public float getPrix() {
+        return prix;
+    }
+
+    public void setPrix(float prix) {
+        this.prix = prix;
+    }
+    
+    
 }
