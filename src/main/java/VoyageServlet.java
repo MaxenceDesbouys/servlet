@@ -77,7 +77,7 @@ public class VoyageServlet extends HttpServlet {
         String arriver = request.getParameter("arriver");
         String prix = request.getParameter("prix");
         
-        unService.CreerStation();
+        // unService.creerVoyage(); // station de depart , station d'arrivée , prix
     }
 
     /**
