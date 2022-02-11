@@ -28,6 +28,10 @@ public class LigneTrain implements Serializable {
     @OneToMany
     ArrayList<StationTrain> lesStations = new ArrayList<StationTrain>();
 
+    public LigneTrain(ArrayList<StationTrain> lesStations) {
+        this.lesStations = lesStations;
+    }
+
     public Long getId() {
         return id;
     }

@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,9 +24,34 @@ import javax.persistence.Table;
 public class Voyage implements Serializable {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "station_depart")
     StationTrain depart;
+
+    public StationTrain getDepart() {
+        return this.depart;
+    }
+
+    public void setDepart(StationTrain depart) {
+        this.depart = depart;
+    }
+
+    public StationTrain getArriver() {
+        return this.arriver;
+    }
+
+    public void setArriver(StationTrain arriver) {
+        this.arriver = arriver;
+    }
+
+    public float getPrix() {
+        return this.prix;
+    }
+
+    public void setPrix(float prix) {
+        this.prix = prix;
+    }
     @Column(name = "station_arriver")
     StationTrain arriver;
     @Column(name = "prix")
