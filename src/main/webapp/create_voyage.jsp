@@ -12,6 +12,9 @@
         <title>Création de Voyage</title>
     </head>
     <body>
+
+        <h1>Création de Voyage</h1>
+
         <form action="VoyageServlet" method="POST">
             <label>Départ</label>
             <br/>
